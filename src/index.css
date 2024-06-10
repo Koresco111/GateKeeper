@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-lg {
+  @apply w-full rounded-lg text-white flex justify-center items-center bg-primary py-4 text-[20px] my-7;
+}
+
+.input {
+  @apply border border-gray-400 rounded-lg py-3 px-2;
+}
