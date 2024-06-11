@@ -35,7 +35,11 @@ function Create() {
     formData.append("plateNum", plateNum);
     formData.append("photo", photo);
     try {
-      await post("http://localhost:8000/api/records/create", token, formData);
+      await post(
+        "https://gk-api-production.up.railway.app/api/records/create",
+        token,
+        formData
+      );
       setLoading(false);
       setPlatenum("");
       setTallyNum("");

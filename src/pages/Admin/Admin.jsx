@@ -12,7 +12,10 @@ function Admin() {
     const question = confirm("Are you sure you want to delete this record?");
     if (question === true) {
       try {
-        await del(`http://localhost:8000/api/records/${id}`, token);
+        await del(
+          `https://gk-api-production.up.railway.app/api/records/${id}`,
+          token
+        );
         alert("Record Deleted Successfully");
       } catch (err) {
         alert("An error Occured");
@@ -21,7 +24,10 @@ function Admin() {
   };
   const GetRecords = async () => {
     try {
-      const response = await get("http://localhost:8000/api/records", token);
+      const response = await get(
+        "https://gk-api-production.up.railway.app/api/records",
+        token
+      );
 
       setRecords(response.data);
     } catch (err) {
@@ -30,7 +36,10 @@ function Admin() {
   };
   const GetUsers = async () => {
     try {
-      const response = await get("http://localhost:8000/api/users", token);
+      const response = await get(
+        "https://gk-api-production.up.railway.app/api/users",
+        token
+      );
 
       setUsers(response.data);
     } catch (err) {
@@ -42,7 +51,10 @@ function Admin() {
     const question = confirm("Are you sure you want to delete this user?");
     if (question === true) {
       try {
-        await del(`http://localhost:8000/api/users/${id}`, token);
+        await del(
+          `https://gk-api-production.up.railway.app/api/users/${id}`,
+          token
+        );
         alert("Record Deleted Successfully");
       } catch (err) {
         alert("An error Occured");

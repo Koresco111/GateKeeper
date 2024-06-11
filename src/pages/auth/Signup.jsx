@@ -27,7 +27,7 @@ function Signup() {
     };
     try {
       const response = await post(
-        "http://localhost:8000/api/auth/register",
+        "https://gk-api-production.up.railway.app/api/auth/register",
         null,
         data
       );

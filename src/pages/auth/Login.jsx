@@ -25,7 +25,7 @@ function Login() {
     };
     try {
       const response = await post(
-        "http://localhost:8000/api/auth/login",
+        "https://gk-api-production.up.railway.app/api/auth/login",
         null,
         data
       );
